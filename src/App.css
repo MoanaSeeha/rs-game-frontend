@@ -1,0 +1,300 @@
+body {
+  background: #222123;
+  color: #eee3de;
+  background: #222123;
+  font-size: 12px;
+}
+
+.header {
+  /* animation: header-width-animation 2s 1s forwards; */
+  animation: header-width-animation 3s 0s forwards;
+}
+
+.nav {
+  top: 1.5rem;
+  font-size: 1em;
+  color: white;
+  animation: animation-fade-in 6s 0s forwards;
+}
+
+.nav-img {
+  width: 1500px;
+  max-width: none;
+  overflow: hidden;
+}
+
+.nav-logo {
+  top: 2rem;
+  left: 2rem;
+  animation: rotation 16s infinite linear;
+}
+
+.containerr {
+  margin: 0;
+  line-height: inherit;
+}
+
+.dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: #ff6464;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.75rem;
+}
+
+.heading {
+  animation: animation-fade-in 7s 0s forwards;
+}
+
+.hero-heading {
+  font-family: 'Big Shoulders Display';
+  font-size: 7rem;
+  text-align: center;
+  line-height: 1;
+}
+
+.super {
+  font-family: "Big Shoulders Display";
+  vertical-align: top;
+  top: 1.25rem;
+  font-size: 1rem;
+  line-height: 0;
+}
+
+.lf-player-container {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-lottie {
+  width: 85vw;
+  height: 85vw;
+}
+
+.hero-lottie img {
+  animation: animation-zoom-out 4s forwards;
+}
+
+.banner {
+  max-width: none;
+  position: absolute;
+  width: 1250px;
+}
+
+.banner-pink {
+  left: -32rem;
+  top: 6rem;
+  animation: transformX 4s forwards;
+}
+
+.banner-green {
+  left: -35rem;
+  top: 20rem;
+  animation: transformX 5.5s forwards;
+}
+
+.banner-orange {
+  left: -25rem;
+  top: 21rem;
+  animation: transformX 5s forwards;
+}
+
+.section-beige {
+  background-color: #efe3da;
+  color: #222123;
+}
+
+.section-beige h2 {
+  font-family: "Big Shoulders Display";
+  font-size: 14rem;
+  margin-top: -3rem;
+  padding-left: 2rem;
+}
+
+.creator {
+  border-top: 1px solid #222123;
+  padding: 2rem;
+}
+
+.creator h3 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.barcode {
+  width: 9rem;
+  float: none;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  height: 1.5rem;
+  opacity: 0.5;
+}
+
+.link-banner {
+  border-top: 1px solid #222123;
+  background-color: #f4bcf9;
+  color: #222123;
+  z-index: 100;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes header-width-animation {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes animation-fade-in {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes transformX {
+  0% {
+    transform: translateX(-100%);
+  }
+  90% {
+    transform: translateX(-100%);
+  }
+  95% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animation-zoom-out {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(0);
+  }
+  97% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 640px) {
+  .banner-green {
+    left: -20rem;
+    top: 25rem;
+  }
+  .banner-orange {
+    top: 27rem;
+  }
+  .hero-heading {
+    font-size: 5rem;
+  }
+  .super {
+    top: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner-pink {
+    left: -11rem;
+    top: 4rem;
+  }
+  .banner-green {
+    left: -18rem;
+    top: 26rem;
+  }
+  .hero-heading {
+    font-size: 4.5rem;
+    text-align: left;
+  }
+  .hero {
+    min-height: 460px;
+  }
+  .hero-lottie {
+    width: 350px;
+    height: 350px;
+}
+}
+
+@media (min-width: 1024px) {
+  .banner-green {
+    left: -10rem;
+    top: 32rem;
+  }
+  .banner {
+    width: 1500px;
+  }
+  .hero-heading {
+    font-size: 6.5rem;
+  }
+  .super {
+    top: 1.75em;
+  }
+  .hero {
+    min-height: 600px;
+  }
+  .hero-lottie {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .banner-green {
+    left: -20%;
+  }
+  .banner {
+    width: 150%;
+  }
+  .hero-heading {
+    font-size: 7rem;
+  }
+  .super {
+    top: 2rem;
+    font-size: 1rem;
+  }
+  .nav-img {
+    width: 100vw;
+  }
+  .creator h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero {
+    max-height: 80vh;
+  }
+  .hero-lottie {
+    width: 75vh;
+    height: 75vh;
+    min-width: 410px;
+    min-height: 410px;
+    max-height: 700px;
+    max-width: 700px;
+  }
+}
