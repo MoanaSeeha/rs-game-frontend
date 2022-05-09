@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
-
-import Main from "../pages/main";
+import Main from "../pages/main/index";
 
 const Router = () => {
   return (
