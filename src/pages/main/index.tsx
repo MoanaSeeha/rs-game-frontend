@@ -1,4 +1,4 @@
-import React, {useRef, useState, MouseEvent} from "react";
+import React, {useRef, useState, MouseEvent, UIEvent, useEffect, useCallback} from "react";
 
 
 
@@ -13,12 +13,10 @@ export default function Main() {
   interface IPosition { x: number; y: number; }
 
   const[clicked,setClicked] = useState(false);
-  const[scale,setScale] = useState(2);
+  const[scale,setScale] = useState(1);
   const[position,setPosition] = useState<IPosition>({ x: 0, y: 0 });
 
   const divRef = React.useRef<HTMLDivElement>(null);
-   
-    
 
   const getMouseDirection = (e: MouseEvent<HTMLDivElement>) => {
     //deal with the horizontal case
@@ -43,15 +41,26 @@ export default function Main() {
         x: position.x + xDirection,
         y: position.y + yDirection,
       })
-
-  
       console.log(e.pageX + " " + e.pageY);
     }
-    
-}
+  }
+
+  const getWheelEvent = (e:React.WheelEvent<HTMLDivElement>) => {
+    console.log('sdffsd');
+    if(e.deltaY<0 && scale < 2) setScale(scale + 0.1);
+    else if(e.deltaY>0 && scale > 0.5) setScale(scale - 0.1);
+  }
+
+  useEffect(() => {
+    // document.addEventListener("mousedown", () => setClicked(true));
+    // document.addEventListener("mousemove", () => getMouseDirection);
+    // document.addEventListener("mouseup", () => setClicked(false));
+  });
+
 
   return (
-    <div className="castle-overlay "
+    <div>
+    <div className="castle-overlay overlay"
       onMouseDown={(e) => {
         setClicked(true);
         setPosition({
@@ -61,13 +70,14 @@ export default function Main() {
       }}
       onMouseMove={getMouseDirection}
       onMouseUp={() => setClicked(false)}
+      onWheel={getWheelEvent}
     >
       <div 
         className="castle-bg"
-        style={{transform: `translate3d(${position.x}px, ${position.y}px, 0px)`, scale: 1}} 
+        style={{transform: `translate3d(${position.x}px, ${position.y}px, 0px) scale(${scale})`}} 
         ref={divRef}
-
       ></div>
+    </div>
     </div>
   )
 }
