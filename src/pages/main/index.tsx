@@ -1,6 +1,7 @@
 import React, { useState, MouseEvent, useEffect} from "react";
+import { useNavigate  } from "react-router-dom";
 
-import { GameButton } from "../../components/Button";
+import { GameButton } from "../../components/Input";
 
 export default function Main() {
 
@@ -9,6 +10,8 @@ export default function Main() {
   const[clicked,setClicked] = useState(false);
   const[scale,setScale] = useState(2);
   const[position,setPosition] = useState<IPosition>({ x: 0, y: 0 });
+  
+  const navigate = useNavigate();
 
   const divRef = React.useRef<HTMLDivElement>(null);
 
@@ -72,7 +75,7 @@ export default function Main() {
           ref={divRef}
         >
           <div className="land-auction-btn click-cursor">
-            <GameButton title="Marketplace"/>
+            <GameButton title="Marketplace" onClick={() => navigate("/marketplace")}/>
           </div>
         </div>
       </div>
