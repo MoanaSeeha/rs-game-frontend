@@ -1,12 +1,6 @@
 import React, {useRef, useState, MouseEvent, UIEvent, useEffect, useCallback} from "react";
 
-
-
-// var bodyElement = document.querySelector("body");
-// bodyElement.addEventListener("mousemove", getMouseDirection, false);
-
- 
-
+import { GameButton } from "../../components/Button";
 
 export default function Main() {
 
@@ -76,7 +70,11 @@ export default function Main() {
         className="castle-bg"
         style={{transform: `translate3d(${position.x}px, ${position.y}px, 0px) scale(${scale})`}} 
         ref={divRef}
-      ></div>
+      >
+        <div className="land-auction-btn click-cursor">
+          <GameButton title="Marketplace"/>
+        </div>
+      </div>
     </div>
     </div>
   )

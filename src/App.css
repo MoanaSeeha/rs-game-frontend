@@ -8,6 +8,13 @@ body {
   overflow: hidden;
 }
 
+button {
+  outline: none;
+  /* background-color: transparent; */
+  border: none;
+  padding: 0;
+}
+
 .root {
   overflow: hidden;
 }
@@ -53,6 +60,71 @@ body {
   left: 523px;
   height: 43px;
   width: 43px;
+}
+
+.game-button {
+  display: block;
+  position: absolute;
+  background-image: url("public/assets/text-bubble-left.bec312cf.png"),url("public/assets/text-bubble-right.e41ea5eb.png");
+  background-position: left top,right top;
+  background-repeat: repeat-y;
+  background-color: #ffe0b7;
+  image-rendering: pixelated;
+  animation: buttonAnimation-1900b524 2s infinite;
+  background-size: 2px 2px;
+}
+
+.game-button:before {
+  top: -2.7398px;
+  left: 4.7398px;
+  width: calc(100% - 9.47959px);
+  height: calc(100% + 5.77959px);
+  background-image: url("public/assets/text-bubble-top.d0ee95ad.png"),url("public/assets/text-bubble-btm.f8ce5a59.png");
+  background-position: center top,center bottom;
+  background-repeat: repeat-x;
+  background-color: #ffe0b7;
+  background-size: 5px 2px;
+}
+
+.game-button:after {
+  top: -2.7398px;
+  left: 0px;
+  width: 100%;
+  height: calc(100% + 6.07959px);
+  background-image: url("public/assets/text-bubble-topLeft.70121122.png"),url("public/assets/text-bubble-topRight.48ee58d9.png"),url("public/assets/text-bubble-btmLeft.07695dc0.png"),url("public/assets/text-bubble-btmRight.e352ddc0.png");
+  background-position: left top,right top,left bottom,right bottom;
+  background-repeat: no-repeat;
+  background-size: 5px 5px;
+}
+
+.game-button:before, .game-button:after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.title {
+  font-size: 3.5px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: #000;
+  padding: 0 10.0344px;
+  font-family: Lora,serif;
+  font-weight: 700;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.game-button img {
+  position: absolute;
+  width: 5px;
+  height: 4px;
+  left: 50%;
+  bottom: -4.4px;
+  transform: translate(-50%);
 }
 
 .click-cursor {
