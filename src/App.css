@@ -503,11 +503,48 @@ hr {
   color: #3e1f05;
 }
 
+.land-summary{
+  font-size: 18px;
+}
+
+.land-sort{
+  display: flex;
+  align-items: center;
+}
+
+.land-sort__label {
+  font-size: 14px;
+}
+
+#landPropertyLabel {
+  margin: 0 8px;
+}
+.land-select__list {
+  background-color: #eecba1;
+  border-radius: 8px;
+  box-shadow: 0 0 3px #3e1f057f;
+  position: relative;
+}
+
 .land-view-container {
   height: 100%;
   padding: 50px 75px 60px;
   display: flex;
   flex-direction: column;
+}
+
+.land-select__list select {
+  padding: 8px 30px 8px 5px;
+  min-width: 130px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  appearance: none;
+}
+
+.land-select__list select option {
+  background-color: #eecba1;
+  color: #3e1f05;
 }
 
 @media (max-width: 1024px) {
@@ -528,6 +565,10 @@ hr {
     flex: 0 0 66.66667%;
     max-width: 66.66667%;
 }
+.l-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
 }
 
 @media (min-width: 740px) {
@@ -537,7 +578,7 @@ hr {
   }
   .m-6 {
     flex: 0 0 50%;
-    max-width: 50%;
+    /* max-width: 50%; */
   }
   .col {
     padding-left: 8px;

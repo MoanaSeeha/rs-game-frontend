@@ -1,11 +1,10 @@
 import React from "react";
 
-import { Modal } from "../../../components/Modal";
+import { Modal, LandViewBoard } from "../../../components/Modal";
 
 const LandView = () => {
   return (
-    <Modal>
-      <h2 className="land-view__heading">View All Assets</h2>
+    <LandViewBoard title="View All Assets">
       <div className="summry-sort-land" data-v-60f0dc79="">
         <div className="land-summary" data-v-60f0dc79="">
           <span data-v-60f0dc79=""> Showing 5 Assets </span>
@@ -27,7 +26,7 @@ const LandView = () => {
           </div>
         </div>
       </div>
-    </Modal>
+    </LandViewBoard>
   )
 }
 
