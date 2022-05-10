@@ -1,5 +1,5 @@
 html {
-  cursor: url("/public/assets/default-cursor.7cb4ac2b.png"),auto !important;
+  cursor: url("/public/assets/default-cursor.png"),auto !important;
   font-family: Poppins;
   overflow: hidden;
 }
@@ -50,28 +50,28 @@ button {
   background-position: center;
   min-width: 1500px;
   min-height: 1500px;
-  transition: all 0s;
+  transition: all 1s;
   transform-origin: center;
 }
 
 .land-auction-btn {
   position: absolute;
-  top: 594.5px;
-  left: 523px;
-  height: 43px;
-  width: 43px;
+  top: 803.5px;
+  left: 631px;
+  height: 80px;
+  width: 100px;
 }
 
 .game-button {
   display: block;
   position: absolute;
-  background-image: url("public/assets/text-bubble-left.bec312cf.png"),url("public/assets/text-bubble-right.e41ea5eb.png");
+  background-image: url("/public/assets/text-bubble-left.png"),url("/public/assets/text-bubble-right.png");
   background-position: left top,right top;
   background-repeat: repeat-y;
   background-color: #ffe0b7;
   image-rendering: pixelated;
-  animation: buttonAnimation-1900b524 2s infinite;
-  background-size: 2px 2px;
+  animation: buttonAnimation 2s infinite;
+  background-size: 4px 4px;
 }
 
 .game-button:before {
@@ -79,11 +79,11 @@ button {
   left: 4.7398px;
   width: calc(100% - 9.47959px);
   height: calc(100% + 5.77959px);
-  background-image: url("public/assets/text-bubble-top.d0ee95ad.png"),url("public/assets/text-bubble-btm.f8ce5a59.png");
+  background-image: url("/public/assets/text-bubble-top.png"),url("/public/assets/text-bubble-btm.png");
   background-position: center top,center bottom;
   background-repeat: repeat-x;
   background-color: #ffe0b7;
-  background-size: 5px 2px;
+  background-size: 10px 4px;
 }
 
 .game-button:after {
@@ -91,10 +91,10 @@ button {
   left: 0px;
   width: 100%;
   height: calc(100% + 6.07959px);
-  background-image: url("public/assets/text-bubble-topLeft.70121122.png"),url("public/assets/text-bubble-topRight.48ee58d9.png"),url("public/assets/text-bubble-btmLeft.07695dc0.png"),url("public/assets/text-bubble-btmRight.e352ddc0.png");
+  background-image: url("/public/assets/text-bubble-topLeft.png"),url("/public/assets/text-bubble-topRight.png"),url("/public/assets/text-bubble-btmLeft.png"),url("/public/assets/text-bubble-btmRight.png");
   background-position: left top,right top,left bottom,right bottom;
   background-repeat: no-repeat;
-  background-size: 5px 5px;
+  background-size: 10px 10px;
 }
 
 .game-button:before, .game-button:after {
@@ -104,7 +104,7 @@ button {
 }
 
 .title {
-  font-size: 3.5px;
+  font-size: 15px;
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -120,13 +120,25 @@ button {
 
 .game-button img {
   position: absolute;
-  width: 5px;
-  height: 4px;
+  width: 10px;
+  height: 8px;
   left: 50%;
   bottom: -4.4px;
   transform: translate(-50%);
 }
 
 .click-cursor {
-  cursor: url("/public/assets/click-cursor.f0afc4df.png")!important;
+  cursor: url("/public/assets/click-cursor.png") !important;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+      transform: translateY(20px);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }

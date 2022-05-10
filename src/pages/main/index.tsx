@@ -7,7 +7,7 @@ export default function Main() {
   interface IPosition { x: number; y: number; }
 
   const[clicked,setClicked] = useState(false);
-  const[scale,setScale] = useState(1);
+  const[scale,setScale] = useState(2);
   const[position,setPosition] = useState<IPosition>({ x: 0, y: 0 });
 
   const divRef = React.useRef<HTMLDivElement>(null);
