@@ -1,4 +1,4 @@
-import React, {useRef, useState, MouseEvent, UIEvent, useEffect, useCallback} from "react";
+import React, { useState, MouseEvent, useEffect} from "react";
 
 import { GameButton } from "../../components/Button";
 
@@ -54,28 +54,28 @@ export default function Main() {
 
   return (
     <div>
-    <div className="castle-overlay overlay"
-      onMouseDown={(e) => {
-        setClicked(true);
-        setPosition({
-          x: e.pageX,
-          y: e.pageY,
-        })
-      }}
-      onMouseMove={getMouseDirection}
-      onMouseUp={() => setClicked(false)}
-      onWheel={getWheelEvent}
-    >
-      <div 
-        className="castle-bg"
-        style={{transform: `translate3d(${position.x}px, ${position.y}px, 0px) scale(${scale})`}} 
-        ref={divRef}
+      <div className="castle-overlay overlay"
+        onMouseDown={(e) => {
+          setClicked(true);
+          setPosition({
+            x: e.pageX,
+            y: e.pageY,
+          })
+        }}
+        onMouseMove={getMouseDirection}
+        onMouseUp={() => setClicked(false)}
+        onWheel={getWheelEvent}
       >
-        <div className="land-auction-btn click-cursor">
-          <GameButton title="Marketplace"/>
+        <div 
+          className="castle-bg"
+          style={{transform: `translate3d(${position.x}px, ${position.y}px, 0px) scale(${scale})`}} 
+          ref={divRef}
+        >
+          <div className="land-auction-btn click-cursor">
+            <GameButton title="Marketplace"/>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   )
 }
