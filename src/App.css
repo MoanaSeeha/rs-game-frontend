@@ -39,7 +39,6 @@ hr {
   width: 100%;
   background-color: #000;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -279,6 +278,7 @@ hr {
 
 .land-auction {
   z-index: 3000;
+  padding: 40px;
   opacity: 1;
   will-change: opacity;
   transition: all .5s linear;
