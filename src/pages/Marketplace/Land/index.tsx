@@ -1,8 +1,15 @@
-import React from "react";
+import React, {FunctionComponent} from "react";
 
-import { Modal, LandViewBoard } from "../../../components/Modal";
+import { LandViewBoard } from "../../../components/Modal";
+import { IAssest, IFilter } from "../Auction"
+import ViewCard from "./ViewCard";
 
-const LandView = () => {
+type Props = {
+  assests: IAssest[];
+  filter: IFilter;
+}
+
+const LandView:FunctionComponent<Props> = (props: Props) => {
   return (
     <LandViewBoard title="View All Assets">
       <div className="summry-sort-land" data-v-60f0dc79="">
@@ -20,10 +27,19 @@ const LandView = () => {
               <option value="4" data-v-60f0dc79="">Sale Price</option>
             </select>
           </div>
-          <div className="land-select__list" data-v-60f0dc79=""><select className="click-cursor" name="sortType" id="sortType" data-v-60f0dc79=""><option value="0" data-v-60f0dc79="">Ascending</option>
-                <option value="1" data-v-60f0dc79="">Descending</option>
-              </select>
+          <div className="land-select__list" data-v-60f0dc79="">
+            <select className="click-cursor" name="sortType" id="sortType" data-v-60f0dc79="">
+              <option value="0" data-v-60f0dc79="">Ascending</option>
+              <option value="1" data-v-60f0dc79="">Descending</option>
+            </select>
           </div>
+        </div>
+        <div className="land-list game-scroll-bar row">
+          {
+            props.assests.map((a, i) => (
+              <ViewCard key={i} asset={a}/>
+            ))
+          }
         </div>
       </div>
     </LandViewBoard>
