@@ -51,7 +51,6 @@ hr {
   background-position: center;
   min-width: 1500px;
   min-height: 1500px;
-  transition: all 1s;
   transform-origin: center;
 }
 
@@ -572,7 +571,7 @@ hr {
   transform: translate(-50%);
   width: calc(100% - 6px);
   border-radius: 8px 2px;
-  background-image: url("/public/assets/download(1).png"),url("/public/assets/download(1).png");
+  background-image: url("/public/assets/download_1.png"),url("/public/assets/download_1.png");
   background-position: top,bottom;
   background-repeat: repeat-x,repeat-x;
 }
