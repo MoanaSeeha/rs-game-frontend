@@ -38,7 +38,7 @@ const Filter:FunctionComponent<Props> = (props: Props) => {
   };
 
   return (
-    <div className="filter col c-12 m-6 l-4 active" data-v-412a3124="">
+    <div className="filter col md:w-1/3 w-4/5" data-v-412a3124="">
       <div className="filter-expanded game-border basic">
         <div className="filter-header">
           <div className="filter-header-group">
@@ -47,9 +47,16 @@ const Filter:FunctionComponent<Props> = (props: Props) => {
               <i className="fas fa-angle-left"></i>
             </div>
           </div>
-          <div className="filter-header-group space-x-2">
+          <div className="filter-header-group">
             <GreenButton title='Apply' onClick={() => props.onFilterChange(filter)}/>
-            <GreenButton title='Reset'/>
+            <GreenButton title='Reset' onClick={() => {
+              setFilter({
+                assetId: '',
+                selectedClasses: ['0'],
+                selectedStatuses: '-1'
+              });
+              props.onFilterChange(filter)
+            }}/>
           </div>
         </div>
         <hr />
