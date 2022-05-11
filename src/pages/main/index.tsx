@@ -54,6 +54,12 @@ export default function Main() {
         onMouseMove={getMouseDirection}
         onMouseUp={() => {
           setClicked(false);
+          console.log('width:', window.screen.width);
+          if(scale * 1500 < window.screen.width - 200)
+          setPosition({
+            x: 0,
+            y: 0,
+          })
           setClickedPoint({
             x: -10000,
             y: -10000
