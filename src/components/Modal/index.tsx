@@ -36,12 +36,14 @@ export const Modal: FC<IModal> = (params) => {
 export const LandViewBoard:FC<IModal> = (params) => {
   
   const {
-    children, title
+    children
   } = params;
+
+  const navigate = useNavigate();
 
   return (
     <div className="land-view-container col c-12 m-6 l-8 game-border fancy">
-      <div className="close-btn click-cursor"></div>
+      <div className="close-btn click-cursor" onClick={() => navigate("/")}/>
       <h2 className="land-view__heading">View All Assets</h2>
         { children }
     </div>)

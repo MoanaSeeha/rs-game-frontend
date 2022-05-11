@@ -34,13 +34,13 @@ const LandView:FunctionComponent<Props> = (props: Props) => {
             </select>
           </div>
         </div>
-        <div className="land-list game-scroll-bar row">
-          {
-            props.assests.map((a, i) => (
-              <ViewCard key={i} asset={a}/>
-            ))
-          }
-        </div>
+      </div>
+      <div className="land-list game-scroll-bar row">
+        {
+          props.assests.map((a, i) => (
+            <ViewCard key={i} asset={a}/>
+          ))
+        }
       </div>
     </LandViewBoard>
   )
