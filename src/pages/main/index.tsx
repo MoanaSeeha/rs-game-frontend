@@ -73,10 +73,13 @@ export default function Main() {
           ref={divRef}
         >
           <div className="land-auction-btn click-cursor">
-            <GameButton title="Marketplace" onClick={() => navigate("/marketplace")}/>
+            <GameButton title="Stake" onClick={() => navigate("/stake")}/>
           </div>
           <div className="quest-btn click-cursor">
            <GameButton title="Quest" onClick={() => navigate("/quest")}/>
+          </div>
+          <div className="market-btn click-cursor">
+           <GameButton title="Market" onClick={() => navigate("/market")}/>
           </div>
           <div className="summon-btn click-cursor">
            <GameButton title="Summon" onClick={() => navigate("/summon")}/>
