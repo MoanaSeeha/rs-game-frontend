@@ -39,7 +39,7 @@ export default function Main() {
       let yDirection = 0;
       if(clickedPoint.x>-10000 && clickedPoint.y>-10000) {
         xDirection =  (e.pageX - clickedPoint.x) * Number(scale);
-        if((position.x>300 && xDirection > 0) || (position.x<-300 && xDirection < 0)) xDirection = 0;
+        if((position.x > 0 && xDirection > 0) || (position.x<-300 && xDirection < 0)) xDirection = 0;
         yDirection =  (e.pageY - clickedPoint.y) * Number(scale);
         if((position.y>500 && yDirection > 0) || (position.y<-500 && yDirection < 0)) yDirection = 0;
       }
