@@ -127,6 +127,7 @@ hr {
 }
 
 .modal-overlay{
+  width: 100%;
   z-index: 2000;
   opacity: 1;
   will-change: opacity;
