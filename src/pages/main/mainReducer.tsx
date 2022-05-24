@@ -4,7 +4,7 @@ import store from '../../store';
 export const mainSlice = createSlice({
   name: 'main',
   initialState: {
-    scale: 0.4,
+    scale: 1,
     position: {
       x: (window.screen.width-1500)/2,
       y: 0,
