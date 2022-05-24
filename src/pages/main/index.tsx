@@ -62,8 +62,9 @@ export default function Main() {
       x: (window.screen.width-1500)/2,
       y: 0,
     }));
+    console.log((scale)*1214, window.screen.height);
     if(e.deltaY<0 && scale < 2) dispatch(setScale(scale + 0.1));
-    else if(e.deltaY>0 && scale > 0.5) dispatch(setScale(scale - 0.1));
+    else if(e.deltaY>0 && (scale)*1214 > window.screen.height) dispatch(setScale(scale - 0.1));
   }
 
   return (
